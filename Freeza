@@ -1,0 +1,71 @@
+"""
+Anteconomics: 
+
+
+Definition: A different perspective in the unanticipated allocation of scarce resources, 
+the measure of efficiency by measuring a tasks inefficiency.
+
+Anteconomics is a perspective that allows you to measure the efficiency of a task by defining 
+their inefficiency instead of their efficiency
+which as we know is a journey of trial and error. Many miscategorize anteconomic practices with 
+other activities as these are many times co-related but are actually independent of each other.
+
+Lets build X, this is a project based on cost efficiency & inefficiency. 
+
+Pretend we need to build a box called X with four sides and a bottom no top.
+Our resources are infinite but our cost are 1X per side which means 5 sides is 5x,
+Now say that you have only have 3 employees & every employee can manage 2 sides. 
+
+1E(2sides)+1E(2sides)+1E(2sides)= 
+3E(6sides)= 
+1Box +1Side
+
+Multiplying by 5 
+
+5Boxes+5Side=6Boxes
+
+Now lets say you hire a manager that inspires your employees from 2sides to 3sides. 
+
+1E(3sides)+1E(3sides)+1E(3sides)=      
+M=3xEmployee=9Sides =
+9X=
+M=1Boxes+4Sides
+M=1Boxes+4Side  
+
+Multiplying by 5 to use all sides
+
+5Boxes+20Sides=9Boxes
+
+Now we can calculate the efficiency with a manager or without one
+By the production of boxes over 5 iterations.
+
+9Boxes-6Boxes= 3Boxes 
+
+So after 5 iterations it is shown that the use of a manager is more efficient or less efficient, 
+More efficient would be my suggestion since productivity increased.
+
+Here we used the idea that we can build a box successfully without a manager
+and how efficient it would be to build with a manager. 
+6/9=0.66 =66% increase in productivity & efficiency. 
+Even though efficiency can only be measured in relationship to productivity 
+we continue to say that 100-66=33% are still inefficient since we made no changesb eyond the 66%.      
+
+"""
+Sides=1
+Employee=2*Sides
+MEmployee=3*Sides
+Manager=3*MEmployee
+
+MGR=0
+MEMP=0
+EMP=0
+for x in range(1,100):
+    if x%5==0:
+        MGR+=Manager
+        MEMP+=MEmployee
+        EMP+=Employee
+        
+print("Manager:", MGR)
+print("MEmployee:", MEMP)
+print("Employee:", EMP)
+
