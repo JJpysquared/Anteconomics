@@ -1,14 +1,12 @@
+
 """
 Anteconomics: 
-
 
 Definition: A different perspective in the unanticipated allocation of scarce resources, 
 the measure of efficiency by measuring a tasks inefficiency.
 
 Anteconomics is a perspective that allows you to measure the efficiency of a task by defining 
-their inefficiency instead of their efficiency
-which as we know is a journey of trial and error. Many miscategorize anteconomic practices with 
-other activities as these are many times co-related but are actually independent of each other.
+their inefficiency instead of their efficiency which as we know is a journey of trial and error.
 
 Lets build X, this is a project based on cost efficiency & inefficiency. 
 
@@ -20,7 +18,7 @@ Now say that you have only have 3 employees & every employee can manage 2 sides.
 3E(6sides)= 
 1Box +1Side
 
-Multiplying by 5 
+Multiplying by 5 for more iterations
 
 5Boxes+5Side=6Boxes
 
@@ -32,7 +30,7 @@ M=3xEmployee=9Sides =
 M=1Boxes+4Sides
 M=1Boxes+4Side  
 
-Multiplying by 5 to use all sides
+Multiplying by 5 for more iterations
 
 5Boxes+20Sides=9Boxes
 
@@ -48,7 +46,7 @@ Here we used the idea that we can build a box successfully without a manager
 and how efficient it would be to build with a manager. 
 6/9=0.66 =66% increase in productivity & efficiency. 
 Even though efficiency can only be measured in relationship to productivity 
-we continue to say that 100-66=33% are still inefficient since we made no changesb eyond the 66%.      
+we continue to say that 100-66=33% are still inefficient since we made no changes beyond the 66%.      
 
 """
 Sides=1
@@ -56,16 +54,17 @@ Employee=2*Sides
 MEmployee=3*Sides
 Manager=3*MEmployee
 
+Iterations=100
+
 MGR=0
 MEMP=0
 EMP=0
-for x in range(1,100):
+
+for x in range(1,Iterations):
     if x%5==0:
         MGR+=Manager
         MEMP+=MEmployee
         EMP+=Employee
         
-print("Manager:", MGR)
-print("MEmployee:", MEMP)
-print("Employee:", EMP)
-
+print("Employee With Manager:", MEMP)
+print("Employee Without Manager:", EMP)
