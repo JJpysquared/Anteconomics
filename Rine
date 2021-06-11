@@ -1,3 +1,5 @@
+import numpy as np 
+import matplotlib
 
 """
 Anteconomics: 
@@ -22,49 +24,73 @@ Multiplying by 5 for more iterations
 
 5Boxes+5Side=6Boxes
 
+Multiplying by 10 for more iterations
+10Boxes+10Side=12Boxes
+
+
 Now lets say you hire a manager that inspires your employees from 2sides to 3sides. 
 
 1E(3sides)+1E(3sides)+1E(3sides)=      
 M=3xEmployee=9Sides =
-9X=
 M=1Boxes+4Sides
-M=1Boxes+4Side  
 
 Multiplying by 5 for more iterations
 
 5Boxes+20Sides=9Boxes
 
-Now we can calculate the efficiency with a manager or without one
-By the production of boxes over 5 iterations.
+Multiplying by 10 for more iterations
+10Boxes+40Sides=18Boxes
+-------------------------------------
 
 9Boxes-6Boxes= 3Boxes 
+"""
 
-So after 5 iterations it is shown that the use of a manager is more efficient or less efficient, 
-More efficient would be my suggestion since productivity increased.
+def fx(Iterations):
+    Sides=1
+    Employee=2*Sides
+    MEmployee=3*Sides
+   
+    MEMP=[]
+    EMP=[]
+    
+    for x in range(0,Iterations):
+        
+        MEMP.append(x*MEmployee)
+        EMP.append(x*Employee)
+        
+    #print("Employee With Manager:", MEMP)
+    #print("Employee Without Manager:", EMP)
+    
+    return MEMP,EMP
+#------------------------------------------------------------------------------------------------------
+#???
+#Coursing around
 
-Here we used the idea that we can build a box successfully without a manager
-and how efficient it would be to build with a manager. 
-6/9=0.66 =66% increase in productivity & efficiency. 
-Even though efficiency can only be measured in relationship to productivity 
-we continue to say that 100-66=33% are still inefficient since we made no changes beyond the 66%.      
+def z_fx(x,y):
+    var=0
+    z=[]
+    boxes=[]
+    sides=[]
+    for i in y:
+        z.append(x[var]-i)
+        var+=1
+
+    return z
+
+iters=17
+x,y=fx(iters)
+z=z_fx(x,y)
+
+print(x)
+print(y)
+print(z)
 
 """
-Sides=1
-Employee=2*Sides
-MEmployee=3*Sides
-Manager=3*MEmployee
+As you can see on the 15th iteration we have 
+30 with out a Manager and 45 with a Manager a difference of 15.
+Dividing these values and converting to percentage 45/30=1.5 -1=0.5*100=50%
+we get a total of 50% increase in productivity efficiency using a manager. 
 
-Iterations=100
 
-MGR=0
-MEMP=0
-EMP=0
+"""
 
-for x in range(1,Iterations):
-    if x%5==0:
-        MGR+=Manager
-        MEMP+=MEmployee
-        EMP+=Employee
-        
-print("Employee With Manager:", MEMP)
-print("Employee Without Manager:", EMP)
