@@ -4,7 +4,7 @@ import matplotlib
 """
 Anteconomics: 
 
-Definition: A different perspective in the misallocation of scarce resources, this can be intentional 
+Definition: The misallocation of scarce resources, this can be intentional 
 such as fraud or unintentional such as hiring the wrong worker
 
 For this section I will be working on the unintentional misallocation of scarce resources 
